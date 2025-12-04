@@ -1,5 +1,3 @@
-# f1-stats-automation
-
 # F1 Daily Stats Tracker
 
 This repo auto-updates using GitHub Actions to track the current F1 season
