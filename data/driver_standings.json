@@ -1,1 +1,217 @@
-{}
+{
+  "kind": "driver",
+  "season": "2025",
+  "standings": [
+    {
+      "code": "NOR",
+      "constructor": "McLaren",
+      "driverId": "norris",
+      "name": "Lando Norris",
+      "nationality": "British",
+      "points": 408.0,
+      "position": 1,
+      "wins": 7
+    },
+    {
+      "code": "VER",
+      "constructor": "Red Bull",
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen",
+      "nationality": "Dutch",
+      "points": 396.0,
+      "position": 2,
+      "wins": 7
+    },
+    {
+      "code": "PIA",
+      "constructor": "McLaren",
+      "driverId": "piastri",
+      "name": "Oscar Piastri",
+      "nationality": "Australian",
+      "points": 392.0,
+      "position": 3,
+      "wins": 7
+    },
+    {
+      "code": "RUS",
+      "constructor": "Mercedes",
+      "driverId": "russell",
+      "name": "George Russell",
+      "nationality": "British",
+      "points": 309.0,
+      "position": 4,
+      "wins": 2
+    },
+    {
+      "code": "LEC",
+      "constructor": "Ferrari",
+      "driverId": "leclerc",
+      "name": "Charles Leclerc",
+      "nationality": "Monegasque",
+      "points": 230.0,
+      "position": 5,
+      "wins": 0
+    },
+    {
+      "code": "HAM",
+      "constructor": "Ferrari",
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton",
+      "nationality": "British",
+      "points": 152.0,
+      "position": 6,
+      "wins": 0
+    },
+    {
+      "code": "ANT",
+      "constructor": "Mercedes",
+      "driverId": "antonelli",
+      "name": "Andrea Kimi Antonelli",
+      "nationality": "Italian",
+      "points": 150.0,
+      "position": 7,
+      "wins": 0
+    },
+    {
+      "code": "ALB",
+      "constructor": "Williams",
+      "driverId": "albon",
+      "name": "Alexander Albon",
+      "nationality": "Thai",
+      "points": 73.0,
+      "position": 8,
+      "wins": 0
+    },
+    {
+      "code": "SAI",
+      "constructor": "Williams",
+      "driverId": "sainz",
+      "name": "Carlos Sainz",
+      "nationality": "Spanish",
+      "points": 64.0,
+      "position": 9,
+      "wins": 0
+    },
+    {
+      "code": "HAD",
+      "constructor": "RB F1 Team",
+      "driverId": "hadjar",
+      "name": "Isack Hadjar",
+      "nationality": "French",
+      "points": 51.0,
+      "position": 10,
+      "wins": 0
+    },
+    {
+      "code": "HUL",
+      "constructor": "Sauber",
+      "driverId": "hulkenberg",
+      "name": "Nico H\u00fclkenberg",
+      "nationality": "German",
+      "points": 49.0,
+      "position": 11,
+      "wins": 0
+    },
+    {
+      "code": "ALO",
+      "constructor": "Aston Martin",
+      "driverId": "alonso",
+      "name": "Fernando Alonso",
+      "nationality": "Spanish",
+      "points": 48.0,
+      "position": 12,
+      "wins": 0
+    },
+    {
+      "code": "BEA",
+      "constructor": "Haas F1 Team",
+      "driverId": "bearman",
+      "name": "Oliver Bearman",
+      "nationality": "British",
+      "points": 41.0,
+      "position": 13,
+      "wins": 0
+    },
+    {
+      "code": "LAW",
+      "constructor": "Red Bull",
+      "driverId": "lawson",
+      "name": "Liam Lawson",
+      "nationality": "New Zealander",
+      "points": 38.0,
+      "position": 14,
+      "wins": 0
+    },
+    {
+      "code": "TSU",
+      "constructor": "RB F1 Team",
+      "driverId": "tsunoda",
+      "name": "Yuki Tsunoda",
+      "nationality": "Japanese",
+      "points": 33.0,
+      "position": 15,
+      "wins": 0
+    },
+    {
+      "code": "OCO",
+      "constructor": "Haas F1 Team",
+      "driverId": "ocon",
+      "name": "Esteban Ocon",
+      "nationality": "French",
+      "points": 32.0,
+      "position": 16,
+      "wins": 0
+    },
+    {
+      "code": "STR",
+      "constructor": "Aston Martin",
+      "driverId": "stroll",
+      "name": "Lance Stroll",
+      "nationality": "Canadian",
+      "points": 32.0,
+      "position": 17,
+      "wins": 0
+    },
+    {
+      "code": "GAS",
+      "constructor": "Alpine F1 Team",
+      "driverId": "gasly",
+      "name": "Pierre Gasly",
+      "nationality": "French",
+      "points": 22.0,
+      "position": 18,
+      "wins": 0
+    },
+    {
+      "code": "BOR",
+      "constructor": "Sauber",
+      "driverId": "bortoleto",
+      "name": "Gabriel Bortoleto",
+      "nationality": "Brazilian",
+      "points": 19.0,
+      "position": 19,
+      "wins": 0
+    },
+    {
+      "code": "COL",
+      "constructor": "Alpine F1 Team",
+      "driverId": "colapinto",
+      "name": "Franco Colapinto",
+      "nationality": "Argentine",
+      "points": 0.0,
+      "position": 20,
+      "wins": 0
+    },
+    {
+      "code": "DOO",
+      "constructor": "Alpine F1 Team",
+      "driverId": "doohan",
+      "name": "Jack Doohan",
+      "nationality": "Australian",
+      "points": 0.0,
+      "position": 21,
+      "wins": 0
+    }
+  ],
+  "updated_at_utc": "2025-12-04T03:06:19Z"
+}
