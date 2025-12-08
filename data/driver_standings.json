@@ -8,7 +8,7 @@
       "driverId": "norris",
       "name": "Lando Norris",
       "nationality": "British",
-      "points": 408.0,
+      "points": 423.0,
       "position": 1,
       "wins": 7
     },
@@ -18,9 +18,9 @@
       "driverId": "max_verstappen",
       "name": "Max Verstappen",
       "nationality": "Dutch",
-      "points": 396.0,
+      "points": 421.0,
       "position": 2,
-      "wins": 7
+      "wins": 8
     },
     {
       "code": "PIA",
@@ -28,7 +28,7 @@
       "driverId": "piastri",
       "name": "Oscar Piastri",
       "nationality": "Australian",
-      "points": 392.0,
+      "points": 410.0,
       "position": 3,
       "wins": 7
     },
@@ -38,7 +38,7 @@
       "driverId": "russell",
       "name": "George Russell",
       "nationality": "British",
-      "points": 309.0,
+      "points": 319.0,
       "position": 4,
       "wins": 2
     },
@@ -48,7 +48,7 @@
       "driverId": "leclerc",
       "name": "Charles Leclerc",
       "nationality": "Monegasque",
-      "points": 230.0,
+      "points": 242.0,
       "position": 5,
       "wins": 0
     },
@@ -58,7 +58,7 @@
       "driverId": "hamilton",
       "name": "Lewis Hamilton",
       "nationality": "British",
-      "points": 152.0,
+      "points": 156.0,
       "position": 6,
       "wins": 0
     },
@@ -93,12 +93,12 @@
       "wins": 0
     },
     {
-      "code": "HAD",
-      "constructor": "RB F1 Team",
-      "driverId": "hadjar",
-      "name": "Isack Hadjar",
-      "nationality": "French",
-      "points": 51.0,
+      "code": "ALO",
+      "constructor": "Aston Martin",
+      "driverId": "alonso",
+      "name": "Fernando Alonso",
+      "nationality": "Spanish",
+      "points": 56.0,
       "position": 10,
       "wins": 0
     },
@@ -108,17 +108,17 @@
       "driverId": "hulkenberg",
       "name": "Nico H\u00fclkenberg",
       "nationality": "German",
-      "points": 49.0,
+      "points": 51.0,
       "position": 11,
       "wins": 0
     },
     {
-      "code": "ALO",
-      "constructor": "Aston Martin",
-      "driverId": "alonso",
-      "name": "Fernando Alonso",
-      "nationality": "Spanish",
-      "points": 48.0,
+      "code": "HAD",
+      "constructor": "RB F1 Team",
+      "driverId": "hadjar",
+      "name": "Isack Hadjar",
+      "nationality": "French",
+      "points": 51.0,
       "position": 12,
       "wins": 0
     },
@@ -143,23 +143,13 @@
       "wins": 0
     },
     {
-      "code": "TSU",
-      "constructor": "RB F1 Team",
-      "driverId": "tsunoda",
-      "name": "Yuki Tsunoda",
-      "nationality": "Japanese",
-      "points": 33.0,
-      "position": 15,
-      "wins": 0
-    },
-    {
       "code": "OCO",
       "constructor": "Haas F1 Team",
       "driverId": "ocon",
       "name": "Esteban Ocon",
       "nationality": "French",
-      "points": 32.0,
-      "position": 16,
+      "points": 38.0,
+      "position": 15,
       "wins": 0
     },
     {
@@ -168,7 +158,17 @@
       "driverId": "stroll",
       "name": "Lance Stroll",
       "nationality": "Canadian",
-      "points": 32.0,
+      "points": 33.0,
+      "position": 16,
+      "wins": 0
+    },
+    {
+      "code": "TSU",
+      "constructor": "RB F1 Team",
+      "driverId": "tsunoda",
+      "name": "Yuki Tsunoda",
+      "nationality": "Japanese",
+      "points": 33.0,
       "position": 17,
       "wins": 0
     },
@@ -213,5 +213,5 @@
       "wins": 0
     }
   ],
-  "updated_at_utc": "2025-12-07T15:40:32Z"
+  "updated_at_utc": "2025-12-08T03:55:14Z"
 }

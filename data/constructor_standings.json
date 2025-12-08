@@ -6,7 +6,7 @@
       "constructorId": "mclaren",
       "name": "McLaren",
       "nationality": "British",
-      "points": 800.0,
+      "points": 833.0,
       "position": 1,
       "wins": 14
     },
@@ -14,7 +14,7 @@
       "constructorId": "mercedes",
       "name": "Mercedes",
       "nationality": "German",
-      "points": 459.0,
+      "points": 469.0,
       "position": 2,
       "wins": 2
     },
@@ -22,15 +22,15 @@
       "constructorId": "red_bull",
       "name": "Red Bull",
       "nationality": "Austrian",
-      "points": 426.0,
+      "points": 451.0,
       "position": 3,
-      "wins": 7
+      "wins": 8
     },
     {
       "constructorId": "ferrari",
       "name": "Ferrari",
       "nationality": "Italian",
-      "points": 382.0,
+      "points": 398.0,
       "position": 4,
       "wins": 0
     },
@@ -54,7 +54,7 @@
       "constructorId": "aston_martin",
       "name": "Aston Martin",
       "nationality": "British",
-      "points": 80.0,
+      "points": 89.0,
       "position": 7,
       "wins": 0
     },
@@ -62,7 +62,7 @@
       "constructorId": "haas",
       "name": "Haas F1 Team",
       "nationality": "American",
-      "points": 73.0,
+      "points": 79.0,
       "position": 8,
       "wins": 0
     },
@@ -70,7 +70,7 @@
       "constructorId": "sauber",
       "name": "Sauber",
       "nationality": "Swiss",
-      "points": 68.0,
+      "points": 70.0,
       "position": 9,
       "wins": 0
     },
@@ -83,5 +83,5 @@
       "wins": 0
     }
   ],
-  "updated_at_utc": "2025-12-07T15:40:32Z"
+  "updated_at_utc": "2025-12-08T03:55:14Z"
 }
