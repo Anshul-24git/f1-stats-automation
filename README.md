@@ -3,6 +3,24 @@
 This repo auto-updates using GitHub Actions to track the current F1 season
 (driver & constructor standings) via the Ergast timing API.
 
+## Setup
+
+To ensure that automated commits count towards your GitHub activity:
+
+1. **Create a Personal Access Token (PAT)**:
+   - Go to GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)
+   - Generate a new token with `repo` scope (full control of private repositories)
+   - Copy the token
+
+2. **Add the token as a repository secret**:
+   - Go to your repository Settings → Secrets and variables → Actions
+   - Create a new repository secret named `PAT_TOKEN`
+   - Paste your Personal Access Token as the value
+
+3. The workflow will automatically use your PAT for commits, which will appear under your GitHub username and count towards your contribution graph.
+
+> **Note**: If you don't set up a PAT_TOKEN secret, the workflow will fall back to using the default GITHUB_TOKEN, but those commits may not count towards your GitHub activity graph.
+
 <!-- F1_AUTO_START -->
 🏁 **Season 2025 is finished.**
 
