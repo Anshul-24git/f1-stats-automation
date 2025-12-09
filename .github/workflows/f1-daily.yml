@@ -38,8 +38,8 @@ jobs:
             exit 0
           fi
 
-          git config user.name "Anshul-24git"
-          git config user.email "Anshul-24git@users.noreply.github.com"
+          git config user.name "${{ github.repository_owner }}"
+          git config user.email "${{ github.repository_owner }}@users.noreply.github.com"
 
           git add .
           git commit -m "chore: update F1 standings ($(date -u +'%Y-%m-%d %H:%M:%S'))"

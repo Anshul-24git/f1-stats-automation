@@ -9,7 +9,7 @@ To ensure that automated commits count towards your GitHub activity:
 
 1. **Create a Personal Access Token (PAT)**:
    - Go to GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)
-   - Generate a new token with `repo` scope (full control of private repositories)
+   - Generate a new token with `repo` scope (or fine-grained token with `contents:write` permission)
    - Copy the token
 
 2. **Add the token as a repository secret**:
