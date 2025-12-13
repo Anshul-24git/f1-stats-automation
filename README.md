@@ -4,13 +4,13 @@ This repo auto-updates using GitHub Actions to track the current F1 season
 (driver & constructor standings) via the Ergast timing API.
 
 <!-- F1_AUTO_START -->
-🏁 **Season 2025 is finished.**
+🏎️ **Season 2025 in progress.**
 
 - 🏁 **Last race** (Round 24): Abu Dhabi Grand Prix – Yas Marina Circuit (UAE, 2025-12-07)
-- 🗓 **Next race**: Season finished ✅
+- 🗓 **Next race** (Round 1): Australian Grand Prix – Albert Park Grand Prix Circuit (Australia, 2026-03-08)
 
-🏆 **Drivers' Champion (2025)**: Lando Norris (423.0 pts, 7 wins, McLaren)
-🏆 **Constructors' Champion (2025)**: McLaren (833.0 pts, 14 wins)
+👑 Current drivers' leader: Lando Norris (423.0 pts, 7 wins, McLaren)
+👑 Current constructors' leader: McLaren (833.0 pts, 14 wins)
 
 ## Top 10 Drivers – 2025
 
