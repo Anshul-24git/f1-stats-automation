@@ -1,16 +1,15 @@
-# This workflow will run a job every day at 5:03 UTC
-
-name: Daily Workflow
+# This workflow is triggered every day at 5 AM UTC
+name: Daily Trigger
 
 on:
   schedule:
-    - cron: '5 3 * * *'
+    - cron: '35 3 * * *'  # Daily at 5 AM UTC
 
 jobs:
-  daily_job:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Run daily script
-        run: ./path/to/script.sh
+      - name: Run script
+        run: echo 'Running daily job'
