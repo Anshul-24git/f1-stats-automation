@@ -1,15 +1,26 @@
-# This workflow is triggered every day at 5 AM UTC
-name: Daily Trigger
+name: F1 Stats Automation
 
 on:
   schedule:
-    - cron: '35 3 * * *'  # Daily at 5 AM UTC
+    - cron: '0 7 * * *' # Daily at 07:00
 
 jobs:
-  build:
+  update-stats:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v2
-      - name: Run script
-        run: echo 'Running daily job'
+
+      - name: Update F1 Stats
+        run: |
+          echo 'Updating F1 stats...'
+
+      - name: Commit Changes
+        run: |
+          git config --local user.email 'action@github.com'
+          git config --local user.name 'GitHub Action'
+          git commit -m 'Update F1 stats' || echo 'No changes to commit'
+
+      - name: Push Changes
+        run: |
+          git push origin main
