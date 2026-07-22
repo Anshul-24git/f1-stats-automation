@@ -1,286 +1,375 @@
-import json
 import os
-from datetime import datetime
-
+import json
 import requests
+import datetime
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+import re
 
-# Ergast-compatible F1 API
-BASE_URL = "https://api.jolpi.ca/ergast/f1"
+BASE_URL = 'https://api.jolpi.ca/ergast/f1'
+TIMEOUT = 30
 
-# Markers used inside README.md
-AUTO_START = "<!-- F1_AUTO_START -->"
-AUTO_END = "<!-- F1_AUTO_END -->"
+def get_session():
+    session = requests.Session()
+    retry = Retry(
+        total=3,
+        backoff_factor=1,
+        status_forcelist=[429, 500, 502, 503, 504]
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount('http://', adapter)
+    session.mount('https://', adapter)
+    return session
 
+def fetch_data(url):
+    session = get_session()
+    response = session.get(url, timeout=TIMEOUT)
+    response.raise_for_status()
+    return response.json()
 
-def fetch_standings(kind: str = "driver"):
-    """
-    Fetch current season standings.
-
-    kind: 'driver' or 'constructor'
-    """
-    if kind == "driver":
-        endpoint = f"{BASE_URL}/current/driverStandings.json"
-    else:
-        endpoint = f"{BASE_URL}/current/constructorStandings.json"
-
-    resp = requests.get(endpoint, timeout=30)
-    resp.raise_for_status()
-    data = resp.json()
-
-    standings_lists = data["MRData"]["StandingsTable"].get("StandingsLists", [])
-    if not standings_lists:
-        return {
-            "season": None,
-            "kind": kind,
-            "updated_at_utc": datetime.utcnow().isoformat(timespec="seconds") + "Z",
-            "standings": [],
-        }
-
-    standings_list = standings_lists[0]
-    season = standings_list["season"]
-
-    raw = standings_list[
-        "DriverStandings" if kind == "driver" else "ConstructorStandings"
-    ]
-
-    simplified = []
-    for row in raw:
-        if kind == "driver":
-            driver = row["Driver"]
-            simplified.append(
-                {
-                    "position": int(row["position"]),
-                    "points": float(row["points"]),
-                    "wins": int(row["wins"]),
-                    "driverId": driver["driverId"],
-                    "code": driver.get("code"),
-                    "name": f"{driver['givenName']} {driver['familyName']}",
-                    "nationality": driver["nationality"],
-                    "constructor": row["Constructors"][0]["name"],
-                }
-            )
-        else:
-            constructor = row["Constructor"]
-            simplified.append(
-                {
-                    "position": int(row["position"]),
-                    "points": float(row["points"]),
-                    "wins": int(row["wins"]),
-                    "constructorId": constructor["constructorId"],
-                    "name": constructor["name"],
-                    "nationality": constructor["nationality"],
-                }
-            )
-
-    return {
-        "season": season,
-        "kind": kind,
-        "updated_at_utc": datetime.utcnow().isoformat(timespec="seconds") + "Z",
-        "standings": simplified,
-    }
-
-
-def fetch_race(which: str):
-    """
-    Fetch last or next race of the current season.
-
-    which: 'last' or 'next'
-    """
-    endpoint = f"{BASE_URL}/current/{which}.json"
-    resp = requests.get(endpoint, timeout=30)
-    resp.raise_for_status()
-    data = resp.json()
-
-    races = data["MRData"]["RaceTable"].get("Races", [])
-    if not races:
+def fetch_standings(kind):
+    try:
+        url = f"{BASE_URL}/current/{kind}Standings.json"
+        data = fetch_data(url)
+        standings_list = data.get('MRData', {}).get('StandingsTable', {}).get('StandingsLists', [])
+        if standings_list:
+            return standings_list[0]
+        return None
+    except Exception as e:
+        print(f"Error fetching {kind} standings: {e}")
         return None
 
-    r = races[0]
-    return {
-        "round": int(r["round"]),
-        "raceName": r["raceName"],
-        "circuit": r["Circuit"]["circuitName"],
-        "date": r["date"],  # YYYY-MM-DD
-        "country": r["Circuit"]["Location"]["country"],
-    }
+def fetch_race(which):
+    try:
+        url = f"{BASE_URL}/current/{which}.json"
+        data = fetch_data(url)
+        races = data.get('MRData', {}).get('RaceTable', {}).get('Races', [])
+        if races:
+            return races[0]
+        return None
+    except Exception as e:
+        print(f"Error fetching {which} race: {e}")
+        return None
 
+def fetch_last_race_results():
+    try:
+        url = f"{BASE_URL}/current/last/results.json"
+        data = fetch_data(url)
+        races = data.get('MRData', {}).get('RaceTable', {}).get('Races', [])
+        if races:
+            return races[0]
+        return None
+    except Exception as e:
+        print(f"Error fetching last race results: {e}")
+        return None
 
-def write_if_changed(path: str, new_data: dict) -> bool:
-    """
-    Writes JSON only if content actually changed.
-    Returns True if file was changed.
-    """
-    existing = None
-    if os.path.exists(path):
+def fetch_season_calendar():
+    try:
+        url = f"{BASE_URL}/current.json"
+        data = fetch_data(url)
+        races = data.get('MRData', {}).get('RaceTable', {}).get('Races', [])
+        return races
+    except Exception as e:
+        print(f"Error fetching season calendar: {e}")
+        return []
+
+def fetch_qualifying_results():
+    try:
+        url = f"{BASE_URL}/current/last/qualifying.json"
+        data = fetch_data(url)
+        races = data.get('MRData', {}).get('RaceTable', {}).get('Races', [])
+        if races:
+            return races[0]
+        return None
+    except Exception as e:
+        print(f"Error fetching qualifying results: {e}")
+        return None
+
+def write_if_changed(filepath, new_data):
+    current_time = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    
+    if os.path.exists(filepath):
         try:
-            with open(path, "r", encoding="utf-8") as f:
-                existing = json.load(f)
+            with open(filepath, 'r') as f:
+                old_data = json.load(f)
+                
+            old_data_cmp = {k: v for k, v in old_data.items() if k != 'updated_at_utc'}
+            new_data_cmp = {k: v for k, v in new_data.items() if k != 'updated_at_utc'}
+            
+            if old_data_cmp == new_data_cmp:
+                print(f"No changes in {filepath}")
+                return False
         except json.JSONDecodeError:
-            existing = None
+            pass
 
-    if existing == new_data:
-        print(f"No changes detected for {path}")
-        return False
-
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(new_data, f, indent=2, sort_keys=True)
-        f.write("\n")
-
-    print(f"Updated {path}")
+    new_data_with_time = new_data.copy()
+    new_data_with_time['updated_at_utc'] = current_time
+    
+    with open(filepath, 'w') as f:
+        json.dump(new_data_with_time, f, indent=2)
+    print(f"Updated {filepath}")
     return True
 
+def format_date(date_str):
+    if not date_str:
+        return "TBD"
+    try:
+        d = datetime.datetime.strptime(date_str, "%Y-%m-%d")
+        return d.strftime("%b ") + str(d.day)
+    except:
+        return date_str
 
-def build_readme_section(driver_data, constructor_data, last_race, next_race):
-    """
-    Build the auto-generated README section as Markdown.
-    """
-    season = driver_data["season"]
+def get_medal(pos):
+    pos = int(pos)
+    if pos == 1: return "🥇"
+    if pos == 2: return "🥈"
+    if pos == 3: return "🥉"
+    return str(pos)
 
-    if not driver_data["standings"] or not constructor_data["standings"]:
-        # Fallback in case the API ever fails or is empty
-        return "Data unavailable at the moment. Please try again later."
-
-    top_driver = driver_data["standings"][0]
-    top_constructor = constructor_data["standings"][0]
-
-    # Header text differs depending on whether season is finished
-    if next_race is None:
-        status_line = f"🏁 **Season {season} is finished.**"
-        champion_lines = [
-            f"🏆 **Drivers' Champion ({season})**: {top_driver['name']} "
-            f"({top_driver['points']} pts, {top_driver['wins']} wins, {top_driver['constructor']})",
-            f"🏆 **Constructors' Champion ({season})**: {top_constructor['name']} "
-            f"({top_constructor['points']} pts, {top_constructor['wins']} wins)",
-        ]
-    else:
-        status_line = f"🏎️ **Season {season} in progress.**"
-        champion_lines = [
-            f"👑 Current drivers' leader: {top_driver['name']} "
-            f"({top_driver['points']} pts, {top_driver['wins']} wins, {top_driver['constructor']})",
-            f"👑 Current constructors' leader: {top_constructor['name']} "
-            f"({top_constructor['points']} pts, {top_constructor['wins']} wins)",
-        ]
-
-    lines = [status_line, ""]
-
-    # Last race info
+def build_readme_section(driver_standings, constructor_standings, last_race, next_race, last_results, calendar):
+    lines = []
+    
+    # 1. Status Line
+    season = "Unknown"
+    if driver_standings and 'season' in driver_standings:
+        season = driver_standings['season']
+    elif calendar and len(calendar) > 0:
+        season = calendar[0].get('season', "Unknown")
+        
+    now = datetime.datetime.now(datetime.timezone.utc)
+    lines.append(f"Season Status: {season} in progress")
+    lines.append("")
+    
+    # 2. Race Info
     if last_race:
-        lines.append(
-            f"- 🏁 **Last race** (Round {last_race['round']}): "
-            f"{last_race['raceName']} – {last_race['circuit']} "
-            f"({last_race['country']}, {last_race['date']})"
-        )
-
-    # Next race or season finished
+        lines.append(f"**Last Race:** {last_race.get('raceName')} (Round {last_race.get('round')}) - {last_race.get('Circuit', {}).get('circuitName')}, {last_race.get('Circuit', {}).get('Location', {}).get('country')} ({format_date(last_race.get('date'))})")
     if next_race:
-        lines.append(
-            f"- 🗓 **Next race** (Round {next_race['round']}): "
-            f"{next_race['raceName']} – {next_race['circuit']} "
-            f"({next_race['country']}, {next_race['date']})"
-        )
-    else:
-        lines.append("- 🗓 **Next race**: Season finished ✅")
-
+        lines.append(f"**Next Race:** {next_race.get('raceName')} (Round {next_race.get('round')}) - {next_race.get('Circuit', {}).get('circuitName')}, {next_race.get('Circuit', {}).get('Location', {}).get('country')} ({format_date(next_race.get('date'))})")
     lines.append("")
-    lines.extend(champion_lines)
+    
+    # 3. Championship Leaders
+    d_leader = None
+    if driver_standings and driver_standings.get('DriverStandings'):
+        d_leader = driver_standings['DriverStandings'][0]
+        name = f"{d_leader.get('Driver', {}).get('givenName')} {d_leader.get('Driver', {}).get('familyName')}"
+        pts = float(d_leader.get('points', 0))
+        wins = int(d_leader.get('wins', 0))
+        lines.append(f"**Drivers' Leader:** {name} - {pts} pts ({wins} wins)")
+        
+    if constructor_standings and constructor_standings.get('ConstructorStandings'):
+        c_leader = constructor_standings['ConstructorStandings'][0]
+        c_name = c_leader.get('Constructor', {}).get('name')
+        c_pts = float(c_leader.get('points', 0))
+        c_wins = int(c_leader.get('wins', 0))
+        lines.append(f"**Constructors' Leader:** {c_name} - {c_pts} pts ({c_wins} wins)")
     lines.append("")
-
-    # Top 10 drivers table
-    lines.append(f"## Top 10 Drivers – {season}")
+    
+    # 4. Season Stats Summary
+    completed = len([r for r in calendar if datetime.datetime.strptime(r.get('date'), "%Y-%m-%d").date() < now.date()]) if calendar else 0
+    total = len(calendar) if calendar else 0
+    remaining = total - completed
+    update_str = now.strftime("%b %d, %Y %H:%M UTC")
+    lines.append(f"📊 {completed} races completed | {remaining} remaining | Last updated: {update_str}")
     lines.append("")
-    lines.append("| Pos | Driver | Constructor | Points | Wins |")
-    lines.append("| --- | ------ | ----------- | ------ | ---- |")
-
-    for row in driver_data["standings"][:10]:
-        lines.append(
-            f"| {row['position']} | {row['name']} | {row['constructor']} | "
-            f"{row['points']} | {row['wins']} |"
-        )
-
+    
+    # 5. Championship Battle
+    lines.append("## 🏆 Championship Battle\n")
+    lines.append("| Driver | Team | Points | Gap to Leader |")
+    lines.append("| --- | --- | ---: | --- |")
+    if driver_standings and driver_standings.get('DriverStandings'):
+        leader_pts = float(driver_standings['DriverStandings'][0].get('points', 0))
+        for i, ds in enumerate(driver_standings['DriverStandings'][:5]):
+            pos = int(ds.get('position', i+1))
+            medal = get_medal(pos)
+            name = f"{ds.get('Driver', {}).get('givenName')} {ds.get('Driver', {}).get('familyName')}"
+            team = ds.get('Constructors', [{}])[0].get('name', 'Unknown')
+            pts = float(ds.get('points', 0))
+            if pos == 1:
+                gap = "—"
+            else:
+                gap = f"-{leader_pts - pts:g} pts"
+            pts_str = f"{pts:g}"
+            lines.append(f"| {medal} {name} | {team} | {pts_str} | {gap} |")
+    lines.append("")
+    
+    # 6. Last Race Podium
+    if last_results:
+        r_name = last_results.get('raceName', 'Unknown')
+        r_round = last_results.get('round', '?')
+        lines.append(f"## 🏁 Last Race: {r_name} (Round {r_round})\n")
+        lines.append("| Pos | Driver | Team | Time/Status | Points |")
+        lines.append("| --- | --- | --- | --- | ---: |")
+        results = last_results.get('Results', [])
+        for res in results[:10]:
+            pos = int(res.get('position', 0))
+            medal_or_pos = get_medal(pos)
+            name = f"{res.get('Driver', {}).get('givenName')} {res.get('Driver', {}).get('familyName')}"
+            team = res.get('Constructor', {}).get('name', 'Unknown')
+            pts = float(res.get('points', 0))
+            pts_str = f"{pts:g}"
+            
+            status = res.get('status', '')
+            time_obj = res.get('Time', {})
+            if time_obj:
+                time_str = time_obj.get('time', status)
+            else:
+                time_str = status
+                
+            fastest = ""
+            fl_obj = res.get('FastestLap', {})
+            if fl_obj and fl_obj.get('rank') == '1':
+                fastest = " ⚡"
+                
+            lines.append(f"| {medal_or_pos} | {name}{fastest} | {team} | {time_str} | {pts_str} |")
+    lines.append("")
+    
+    # 7. Full Drivers' Championship
+    lines.append(f"## 🏎️ Drivers' Championship — {season}\n")
+    lines.append("| Pos | Driver | Team | Points | Wins |")
+    lines.append("| ---: | --- | --- | ---: | ---: |")
+    if driver_standings and driver_standings.get('DriverStandings'):
+        for ds in driver_standings['DriverStandings']:
+            pos = int(ds.get('position', 0))
+            name = f"{ds.get('Driver', {}).get('givenName')} {ds.get('Driver', {}).get('familyName')}"
+            team = ds.get('Constructors', [{}])[0].get('name', 'Unknown')
+            pts = float(ds.get('points', 0))
+            pts_str = f"{pts:g}"
+            wins = int(ds.get('wins', 0))
+            lines.append(f"| {pos} | {name} | {team} | {pts_str} | {wins} |")
+    lines.append("")
+    
+    # 8. Constructors' Championship
+    lines.append(f"## 🏗️ Constructors' Championship — {season}\n")
+    lines.append("| Pos | Team | Points | Wins |")
+    lines.append("| ---: | --- | ---: | ---: |")
+    if constructor_standings and constructor_standings.get('ConstructorStandings'):
+        for cs in constructor_standings['ConstructorStandings']:
+            pos = int(cs.get('position', 0))
+            team = cs.get('Constructor', {}).get('name', 'Unknown')
+            pts = float(cs.get('points', 0))
+            pts_str = f"{pts:g}"
+            wins = int(cs.get('wins', 0))
+            lines.append(f"| {pos} | {team} | {pts_str} | {wins} |")
+    lines.append("")
+    
+    # 9. Season Calendar
+    lines.append(f"## 📅 Season Calendar — {season}\n")
+    lines.append("| Round | Race | Circuit | Date | Status |")
+    lines.append("| ---: | --- | --- | --- | --- |")
+    
+    next_race_round = None
+    if next_race:
+        next_race_round = next_race.get('round')
+        
+    if calendar:
+        for r in calendar:
+            rd = r.get('round', '')
+            name = r.get('raceName', '')
+            circuit = r.get('Circuit', {}).get('circuitName', '')
+            date_val = r.get('date', '')
+            date_str = format_date(date_val)
+            
+            status = "⬜ Upcoming"
+            if rd == next_race_round:
+                status = "🔜 Next Race"
+            elif date_val:
+                try:
+                    d = datetime.datetime.strptime(date_val, "%Y-%m-%d").date()
+                    if d < now.date():
+                        status = "✅ Completed"
+                except:
+                    pass
+                    
+            lines.append(f"| {rd} | {name} | {circuit} | {date_str} | {status} |")
+    lines.append("")
+    
+    # 10. Footer
+    lines.append("---")
+    lines.append("> 🤖 Auto-updated by [GitHub Actions](../../actions) using the [Jolpica F1 API](https://github.com/jolpica/jolpica-f1) | [View raw data](data/)")
+    
     return "\n".join(lines)
 
-
-def update_readme(driver_data, constructor_data) -> bool:
-    """
-    Update README.md's auto-generated section.
-    Returns True if the file changed.
-    """
-    last_race = None
-    next_race = None
-
-    try:
-        last_race = fetch_race("last")
-    except requests.RequestException as e:
-        print(f"Warning: failed to fetch last race: {e}")
-
-    try:
-        next_race = fetch_race("next")
-    except requests.RequestException as e:
-        # When season is over, next race may not exist
-        print(f"Info: failed to fetch next race (season might be over): {e}")
-        next_race = None
-
-    auto_section = build_readme_section(driver_data, constructor_data, last_race, next_race)
-
-    readme_path = "README.md"
-
-    if os.path.exists(readme_path):
-        with open(readme_path, "r", encoding="utf-8") as f:
-            original_content = f.read()
+def update_readme(readme_path, new_section_content, driver_standings):
+    if not os.path.exists(readme_path):
+        print(f"README.md not found at {readme_path}")
+        return
+        
+    with open(readme_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+        
+    # Replace main section
+    start_marker = "<!-- F1_AUTO_START -->"
+    end_marker = "<!-- F1_AUTO_END -->"
+    
+    if start_marker in content and end_marker in content:
+        before = content.split(start_marker)[0]
+        after = content.split(end_marker)[1]
+        new_content = before + start_marker + "\n" + new_section_content + "\n" + end_marker + after
     else:
-        # Basic header if README is missing
-        original_content = "# F1 Daily Stats Tracker\n\n" + AUTO_START + "\n" + AUTO_END + "\n"
-
-    if AUTO_START not in original_content or AUTO_END not in original_content:
-        # Append auto section at the end if markers missing
-        new_content = (
-            original_content.rstrip()
-            + "\n\n"
-            + AUTO_START
-            + "\n"
-            + auto_section
-            + "\n"
-            + AUTO_END
-            + "\n"
-        )
+        new_content = content + "\n\n" + start_marker + "\n" + new_section_content + "\n" + end_marker + "\n"
+        
+    # Update leader line
+    leader_marker = "<!-- F1_LEADER -->"
+    leader_info = ""
+    if driver_standings and driver_standings.get('DriverStandings'):
+        d_leader = driver_standings['DriverStandings'][0]
+        name = f"{d_leader.get('Driver', {}).get('givenName')} {d_leader.get('Driver', {}).get('familyName')}"
+        pts = float(d_leader.get('points', 0))
+        wins = int(d_leader.get('wins', 0))
+        season = driver_standings.get('season', datetime.datetime.now().year)
+        leader_info = f"🏁 Current F1 leader ({season}): {name} - {pts:g} pts, {wins} wins"
+        
+    if leader_marker in new_content:
+        lines = new_content.split('\n')
+        for i, line in enumerate(lines):
+            if leader_marker in line:
+                if i + 1 < len(lines):
+                    lines[i+1] = leader_info
+                else:
+                    lines.append(leader_info)
+                break
+        new_content = '\n'.join(lines)
     else:
-        before, _, rest = original_content.partition(AUTO_START)
-        _, _, after = rest.partition(AUTO_END)
-        new_content = before + AUTO_START + "\n" + auto_section + "\n" + AUTO_END + after
-
-    if new_content == original_content:
-        print("No changes detected for README.md")
-        return False
-
-    with open(readme_path, "w", encoding="utf-8") as f:
+        new_content += f"\n{leader_marker}\n{leader_info}\n"
+        
+    with open(readme_path, 'w', encoding='utf-8') as f:
         f.write(new_content)
-
     print("Updated README.md")
-    return True
-
 
 def main():
-    os.makedirs("data", exist_ok=True)
-
-    changed = False
-
-    driver_data = fetch_standings("driver")
-    constructor_data = fetch_standings("constructor")
-
-    if write_if_changed("data/driver_standings.json", driver_data):
-        changed = True
-
-    if write_if_changed("data/constructor_standings.json", constructor_data):
-        changed = True
-
-    if update_readme(driver_data, constructor_data):
-        changed = True
-
-    if changed:
-        print("Repo updated with latest F1 data.")
-    else:
-        print("No repo changes.")
-
+    os.makedirs('data', exist_ok=True)
+    
+    print("Fetching F1 Data...")
+    driver_standings = fetch_standings('driver')
+    constructor_standings = fetch_standings('constructor')
+    last_race = fetch_race('last')
+    next_race = fetch_race('next')
+    last_results = fetch_last_race_results()
+    calendar = fetch_season_calendar()
+    qualifying = fetch_qualifying_results()
+    
+    print("\nWriting JSON data files...")
+    if driver_standings:
+        write_if_changed('data/driver_standings.json', {'data': driver_standings})
+    if constructor_standings:
+        write_if_changed('data/constructor_standings.json', {'data': constructor_standings})
+    if last_results:
+        write_if_changed('data/last_race_results.json', {'data': last_results, 'qualifying': qualifying})
+    if calendar:
+        write_if_changed('data/season_calendar.json', {'data': calendar})
+        
+    print("\nGenerating README section...")
+    readme_section = build_readme_section(
+        driver_standings, 
+        constructor_standings, 
+        last_race, 
+        next_race, 
+        last_results, 
+        calendar
+    )
+    
+    update_readme('README.md', readme_section, driver_standings)
+    print("Done!")
 
 if __name__ == "__main__":
     main()

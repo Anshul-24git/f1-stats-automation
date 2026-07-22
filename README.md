@@ -1,12 +1,141 @@
-# F1 Daily Stats Tracker
+# 🏎️ F1 Stats Automation
 
-This repo auto-updates using GitHub Actions to track the current F1 season
-(driver & constructor standings) via the Ergast timing API.
+[![F1 Stats Automation](https://github.com/Anshul-24git/f1-stats-automation/actions/workflows/f1-daily.yml/badge.svg)](https://github.com/Anshul-24git/f1-stats-automation/actions/workflows/f1-daily.yml)
+
+> **Live Formula 1 standings, race results, and season calendar — auto-updated daily by GitHub Actions.**
+
+This repository tracks the current F1 season with comprehensive data including driver & constructor championships, last race results with podium finishers, and a complete season calendar. Data is fetched from the [Jolpica F1 API](https://github.com/jolpica/jolpica-f1) (successor to the retired Ergast API) and committed automatically.
+
+### ✨ Features
+
+- 🏆 **Championship Battle** — Top 5 title contenders with points gaps
+- 🏁 **Last Race Results** — Top 10 finishers with fastest lap indicator
+- 🏎️ **Full Driver Standings** — Complete championship table
+- 🏗️ **Constructor Standings** — Team championship rankings
+- 📅 **Season Calendar** — Every race with completion status
+- 📊 **Season Stats** — Races completed, remaining, live update timestamps
+- 🤖 **Fully Automated** — Daily updates via GitHub Actions, zero maintenance
+
+### 🔧 How It Works
+
+1. A GitHub Actions workflow runs daily at 07:00 UTC (and can be triggered manually)
+2. The Python script fetches live data from the Jolpica F1 API
+3. JSON data files in [`data/`](data/) are updated only when standings change
+4. This README is regenerated with the latest stats
+5. Changes are committed and pushed automatically
+
+---
 
 <!-- F1_AUTO_START -->
-Data unavailable at the moment. Please try again later.
+Season Status: 2026 in progress
+
+**Last Race:** Belgian Grand Prix (Round 10) - Circuit de Spa-Francorchamps, Belgium (Jul 19)
+**Next Race:** Hungarian Grand Prix (Round 11) - Hungaroring, Hungary (Jul 26)
+
+**Drivers' Leader:** Andrea Kimi Antonelli - 204.0 pts (6 wins)
+**Constructors' Leader:** Mercedes - 358.0 pts (8 wins)
+
+📊 10 races completed | 12 remaining | Last updated: Jul 22, 2026 16:01 UTC
+
+## 🏆 Championship Battle
+
+| Driver | Team | Points | Gap to Leader |
+| --- | --- | ---: | --- |
+| 🥇 Andrea Kimi Antonelli | Mercedes | 204 | — |
+| 🥈 Lewis Hamilton | Ferrari | 159 | -45 pts |
+| 🥉 George Russell | Mercedes | 154 | -50 pts |
+| 4 Charles Leclerc | Ferrari | 126 | -78 pts |
+| 5 Lando Norris | McLaren | 103 | -101 pts |
+
+## 🏁 Last Race: Belgian Grand Prix (Round 10)
+
+| Pos | Driver | Team | Time/Status | Points |
+| --- | --- | --- | --- | ---: |
+| 🥇 | Andrea Kimi Antonelli | Mercedes | 1:24:42.479 | 25 |
+| 🥈 | Charles Leclerc | Ferrari | +1.952 | 18 |
+| 🥉 | Max Verstappen | Red Bull | +11.586 | 15 |
+| 4 | Lewis Hamilton | Ferrari | +17.245 | 12 |
+| 5 | Oscar Piastri | McLaren | +18.988 | 10 |
+| 6 | Isack Hadjar | Red Bull | +23.307 | 8 |
+| 7 | Lando Norris ⚡ | McLaren | +24.014 | 6 |
+| 8 | Gabriel Bortoleto | Audi | +49.140 | 4 |
+| 9 | Arvid Lindblad | RB F1 Team | +50.406 | 2 |
+| 10 | Franco Colapinto | Alpine F1 Team | +1:16.037 | 1 |
+
+## 🏎️ Drivers' Championship — 2026
+
+| Pos | Driver | Team | Points | Wins |
+| ---: | --- | --- | ---: | ---: |
+| 1 | Andrea Kimi Antonelli | Mercedes | 204 | 6 |
+| 2 | Lewis Hamilton | Ferrari | 159 | 1 |
+| 3 | George Russell | Mercedes | 154 | 2 |
+| 4 | Charles Leclerc | Ferrari | 126 | 1 |
+| 5 | Lando Norris | McLaren | 103 | 0 |
+| 6 | Oscar Piastri | McLaren | 92 | 0 |
+| 7 | Max Verstappen | Red Bull | 91 | 0 |
+| 8 | Isack Hadjar | Red Bull | 60 | 0 |
+| 9 | Pierre Gasly | Alpine F1 Team | 42 | 0 |
+| 10 | Liam Lawson | RB F1 Team | 39 | 0 |
+| 11 | Arvid Lindblad | RB F1 Team | 22 | 0 |
+| 12 | Franco Colapinto | Alpine F1 Team | 19 | 0 |
+| 13 | Oliver Bearman | Haas F1 Team | 18 | 0 |
+| 14 | Gabriel Bortoleto | Audi | 10 | 0 |
+| 15 | Carlos Sainz | Williams | 6 | 0 |
+| 16 | Alexander Albon | Williams | 5 | 0 |
+| 17 | Esteban Ocon | Haas F1 Team | 3 | 0 |
+| 18 | Fernando Alonso | Aston Martin | 1 | 0 |
+| 19 | Nico Hülkenberg | Audi | 0 | 0 |
+| 20 | Valtteri Bottas | Cadillac F1 Team | 0 | 0 |
+| 21 | Sergio Pérez | Cadillac F1 Team | 0 | 0 |
+| 22 | Lance Stroll | Aston Martin | 0 | 0 |
+
+## 🏗️ Constructors' Championship — 2026
+
+| Pos | Team | Points | Wins |
+| ---: | --- | ---: | ---: |
+| 1 | Mercedes | 358 | 8 |
+| 2 | Ferrari | 285 | 2 |
+| 3 | McLaren | 195 | 0 |
+| 4 | Red Bull | 151 | 0 |
+| 5 | Alpine F1 Team | 61 | 0 |
+| 6 | RB F1 Team | 61 | 0 |
+| 7 | Haas F1 Team | 21 | 0 |
+| 8 | Williams | 11 | 0 |
+| 9 | Audi | 10 | 0 |
+| 10 | Aston Martin | 1 | 0 |
+| 11 | Cadillac F1 Team | 0 | 0 |
+
+## 📅 Season Calendar — 2026
+
+| Round | Race | Circuit | Date | Status |
+| ---: | --- | --- | --- | --- |
+| 1 | Australian Grand Prix | Albert Park Grand Prix Circuit | Mar 8 | ✅ Completed |
+| 2 | Chinese Grand Prix | Shanghai International Circuit | Mar 15 | ✅ Completed |
+| 3 | Japanese Grand Prix | Suzuka Circuit | Mar 29 | ✅ Completed |
+| 4 | Miami Grand Prix | Miami International Autodrome | May 3 | ✅ Completed |
+| 5 | Canadian Grand Prix | Circuit Gilles Villeneuve | May 24 | ✅ Completed |
+| 6 | Monaco Grand Prix | Circuit de Monaco | Jun 7 | ✅ Completed |
+| 7 | Barcelona Grand Prix | Circuit de Barcelona-Catalunya | Jun 14 | ✅ Completed |
+| 8 | Austrian Grand Prix | Red Bull Ring | Jun 28 | ✅ Completed |
+| 9 | British Grand Prix | Silverstone Circuit | Jul 5 | ✅ Completed |
+| 10 | Belgian Grand Prix | Circuit de Spa-Francorchamps | Jul 19 | ✅ Completed |
+| 11 | Hungarian Grand Prix | Hungaroring | Jul 26 | 🔜 Next Race |
+| 12 | Dutch Grand Prix | Circuit Park Zandvoort | Aug 23 | ⬜ Upcoming |
+| 13 | Italian Grand Prix | Autodromo Nazionale di Monza | Sep 6 | ⬜ Upcoming |
+| 14 | Spanish Grand Prix | Madring | Sep 13 | ⬜ Upcoming |
+| 15 | Azerbaijan Grand Prix | Baku City Circuit | Sep 26 | ⬜ Upcoming |
+| 16 | Singapore Grand Prix | Marina Bay Street Circuit | Oct 11 | ⬜ Upcoming |
+| 17 | United States Grand Prix | Circuit of the Americas | Oct 25 | ⬜ Upcoming |
+| 18 | Mexico City Grand Prix | Autódromo Hermanos Rodríguez | Nov 1 | ⬜ Upcoming |
+| 19 | Brazilian Grand Prix | Autódromo José Carlos Pace | Nov 8 | ⬜ Upcoming |
+| 20 | Las Vegas Grand Prix | Las Vegas Strip Street Circuit | Nov 22 | ⬜ Upcoming |
+| 21 | Qatar Grand Prix | Losail International Circuit | Nov 29 | ⬜ Upcoming |
+| 22 | Abu Dhabi Grand Prix | Yas Marina Circuit | Dec 6 | ⬜ Upcoming |
+
+---
+> 🤖 Auto-updated by [GitHub Actions](../../actions) using the [Jolpica F1 API](https://github.com/jolpica/jolpica-f1) | [View raw data](data/)
 <!-- F1_AUTO_END -->
 
 
 <!-- F1_LEADER -->
-🏁 Current F1 leader (2025): Lando Norris - 408.0 pts, 7 wins
+🏁 Current F1 leader (2026): Andrea Kimi Antonelli - 204 pts, 6 wins

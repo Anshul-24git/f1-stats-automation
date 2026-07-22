@@ -2,25 +2,33 @@ name: F1 Stats Automation
 
 on:
   schedule:
-    - cron: '0 7 * * *' # Daily at 07:00
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-stats:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
       - name: Update F1 Stats
-        run: |
-          echo 'Updating F1 stats...'
+        run: python scripts/update_f1_standings.py
 
-      - name: Commit Changes
+      - name: Commit and Push Changes
         run: |
           git config --local user.email 'action@github.com'
           git config --local user.name 'GitHub Action'
-          git commit -m 'Update F1 stats' || echo 'No changes to commit'
-
-      - name: Push Changes
-        run: |
-          git push origin main
+          git add -A
+          git diff --cached --quiet || (git commit -m "chore: update F1 standings ($(date -u +'%Y-%m-%d %H:%M:%S'))" && git push)
