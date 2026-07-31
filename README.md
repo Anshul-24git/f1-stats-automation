@@ -35,7 +35,7 @@ Season Status: 2026 in progress
 **Drivers' Leader:** Andrea Kimi Antonelli - 219.0 pts (6 wins)
 **Constructors' Leader:** Mercedes - 379.0 pts (8 wins)
 
-📊 11 races completed | 11 remaining | Last updated: Jul 30, 2026 09:29 UTC
+📊 11 races completed | 12 remaining | Last updated: Jul 31, 2026 09:43 UTC
 
 ## 🏆 Championship Battle
 
@@ -124,13 +124,14 @@ Season Status: 2026 in progress
 | 13 | Italian Grand Prix | Autodromo Nazionale di Monza | Sep 6 | ⬜ Upcoming |
 | 14 | Spanish Grand Prix | Madring | Sep 13 | ⬜ Upcoming |
 | 15 | Azerbaijan Grand Prix | Baku City Circuit | Sep 26 | ⬜ Upcoming |
-| 16 | Singapore Grand Prix | Marina Bay Street Circuit | Oct 11 | ⬜ Upcoming |
-| 17 | United States Grand Prix | Circuit of the Americas | Oct 25 | ⬜ Upcoming |
-| 18 | Mexico City Grand Prix | Autódromo Hermanos Rodríguez | Nov 1 | ⬜ Upcoming |
-| 19 | Brazilian Grand Prix | Autódromo José Carlos Pace | Nov 8 | ⬜ Upcoming |
-| 20 | Las Vegas Grand Prix | Las Vegas Strip Street Circuit | Nov 22 | ⬜ Upcoming |
-| 21 | Qatar Grand Prix | Losail International Circuit | Nov 29 | ⬜ Upcoming |
-| 22 | Abu Dhabi Grand Prix | Yas Marina Circuit | Dec 6 | ⬜ Upcoming |
+| 16 | Bahrain Grand Prix in Malaysia | Sepang International Circuit | Oct 4 | ⬜ Upcoming |
+| 17 | Singapore Grand Prix | Marina Bay Street Circuit | Oct 11 | ⬜ Upcoming |
+| 18 | United States Grand Prix | Circuit of the Americas | Oct 25 | ⬜ Upcoming |
+| 19 | Mexico City Grand Prix | Autódromo Hermanos Rodríguez | Nov 1 | ⬜ Upcoming |
+| 20 | Brazilian Grand Prix | Autódromo José Carlos Pace | Nov 8 | ⬜ Upcoming |
+| 21 | Las Vegas Grand Prix | Las Vegas Strip Street Circuit | Nov 22 | ⬜ Upcoming |
+| 22 | Qatar Grand Prix | Losail International Circuit | Nov 29 | ⬜ Upcoming |
+| 23 | Abu Dhabi Grand Prix | Yas Marina Circuit | Dec 6 | ⬜ Upcoming |
 
 ---
 > 🤖 Auto-updated by [GitHub Actions](../../actions) using the [Jolpica F1 API](https://github.com/jolpica/jolpica-f1) | [View raw data](data/)
