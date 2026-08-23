@@ -32,20 +32,20 @@ Season Status: 2026 in progress
 **Last Race:** Hungarian Grand Prix (Round 11) - Hungaroring, Hungary (Jul 26)
 **Next Race:** Dutch Grand Prix (Round 12) - Circuit Park Zandvoort, Netherlands (Aug 23)
 
-**Drivers' Leader:** Andrea Kimi Antonelli - 219.0 pts (6 wins)
-**Constructors' Leader:** Mercedes - 379.0 pts (8 wins)
+**Drivers' Leader:** Andrea Kimi Antonelli - 224.0 pts (6 wins)
+**Constructors' Leader:** Mercedes - 392.0 pts (8 wins)
 
-📊 11 races completed | 12 remaining | Last updated: Aug 22, 2026 07:30 UTC
+📊 11 races completed | 12 remaining | Last updated: Aug 23, 2026 07:32 UTC
 
 ## 🏆 Championship Battle
 
 | Driver | Team | Points | Gap to Leader |
 | --- | --- | ---: | --- |
-| 🥇 Andrea Kimi Antonelli | Mercedes | 219 | — |
-| 🥈 Lewis Hamilton | Ferrari | 169 | -50 pts |
-| 🥉 George Russell | Mercedes | 160 | -59 pts |
-| 4 Charles Leclerc | Ferrari | 138 | -81 pts |
-| 5 Lando Norris | McLaren | 128 | -91 pts |
+| 🥇 Andrea Kimi Antonelli | Mercedes | 224 | — |
+| 🥈 Lewis Hamilton | Ferrari | 171 | -53 pts |
+| 🥉 George Russell | Mercedes | 168 | -56 pts |
+| 4 Charles Leclerc | Ferrari | 145 | -79 pts |
+| 5 Lando Norris | McLaren | 134 | -90 pts |
 
 ## 🏁 Last Race: Hungarian Grand Prix (Round 11)
 
@@ -66,16 +66,16 @@ Season Status: 2026 in progress
 
 | Pos | Driver | Team | Points | Wins |
 | ---: | --- | --- | ---: | ---: |
-| 1 | Andrea Kimi Antonelli | Mercedes | 219 | 6 |
-| 2 | Lewis Hamilton | Ferrari | 169 | 1 |
-| 3 | George Russell | Mercedes | 160 | 2 |
-| 4 | Charles Leclerc | Ferrari | 138 | 1 |
-| 5 | Lando Norris | McLaren | 128 | 1 |
-| 6 | Max Verstappen | Red Bull | 109 | 0 |
-| 7 | Oscar Piastri | McLaren | 92 | 0 |
+| 1 | Andrea Kimi Antonelli | Mercedes | 224 | 6 |
+| 2 | Lewis Hamilton | Ferrari | 171 | 1 |
+| 3 | George Russell | Mercedes | 168 | 2 |
+| 4 | Charles Leclerc | Ferrari | 145 | 1 |
+| 5 | Lando Norris | McLaren | 134 | 1 |
+| 6 | Max Verstappen | Red Bull | 112 | 0 |
+| 7 | Oscar Piastri | McLaren | 96 | 0 |
 | 8 | Isack Hadjar | Red Bull | 68 | 0 |
-| 9 | Liam Lawson | RB F1 Team | 43 | 0 |
-| 10 | Pierre Gasly | Alpine F1 Team | 42 | 0 |
+| 9 | Pierre Gasly | Alpine F1 Team | 43 | 0 |
+| 10 | Liam Lawson | RB F1 Team | 43 | 0 |
 | 11 | Arvid Lindblad | RB F1 Team | 23 | 0 |
 | 12 | Franco Colapinto | Alpine F1 Team | 19 | 0 |
 | 13 | Oliver Bearman | Haas F1 Team | 18 | 0 |
@@ -88,17 +88,18 @@ Season Status: 2026 in progress
 | 20 | Lance Stroll | Aston Martin | 0 | 0 |
 | 21 | Valtteri Bottas | Cadillac F1 Team | 0 | 0 |
 | 22 | Sergio Pérez | Cadillac F1 Team | 0 | 0 |
+| 23 | Yuki Tsunoda | RB F1 Team | 0 | 0 |
 
 ## 🏗️ Constructors' Championship — 2026
 
 | Pos | Team | Points | Wins |
 | ---: | --- | ---: | ---: |
-| 1 | Mercedes | 379 | 8 |
-| 2 | Ferrari | 307 | 2 |
-| 3 | McLaren | 220 | 1 |
-| 4 | Red Bull | 177 | 0 |
+| 1 | Mercedes | 392 | 8 |
+| 2 | Ferrari | 316 | 2 |
+| 3 | McLaren | 230 | 1 |
+| 4 | Red Bull | 180 | 0 |
 | 5 | RB F1 Team | 66 | 0 |
-| 6 | Alpine F1 Team | 61 | 0 |
+| 6 | Alpine F1 Team | 62 | 0 |
 | 7 | Haas F1 Team | 21 | 0 |
 | 8 | Audi | 12 | 0 |
 | 9 | Williams | 11 | 0 |
@@ -139,4 +140,4 @@ Season Status: 2026 in progress
 
 
 <!-- F1_LEADER -->
-🏁 Current F1 leader (2026): Andrea Kimi Antonelli - 219 pts, 6 wins
+🏁 Current F1 leader (2026): Andrea Kimi Antonelli - 224 pts, 6 wins
