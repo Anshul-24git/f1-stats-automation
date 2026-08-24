@@ -6,7 +6,7 @@
       {
         "position": "1",
         "positionText": "1",
-        "points": "392",
+        "points": "425",
         "wins": "8",
         "Constructor": {
           "constructorId": "mercedes",
@@ -18,7 +18,7 @@
       {
         "position": "2",
         "positionText": "2",
-        "points": "316",
+        "points": "338",
         "wins": "2",
         "Constructor": {
           "constructorId": "ferrari",
@@ -30,8 +30,8 @@
       {
         "position": "3",
         "positionText": "3",
-        "points": "230",
-        "wins": "1",
+        "points": "263",
+        "wins": "2",
         "Constructor": {
           "constructorId": "mclaren",
           "url": "https://en.wikipedia.org/wiki/McLaren",
@@ -42,7 +42,7 @@
       {
         "position": "4",
         "positionText": "4",
-        "points": "180",
+        "points": "186",
         "wins": "0",
         "Constructor": {
           "constructorId": "red_bull",
@@ -66,7 +66,7 @@
       {
         "position": "6",
         "positionText": "6",
-        "points": "62",
+        "points": "63",
         "wins": "0",
         "Constructor": {
           "constructorId": "alpine",
@@ -90,7 +90,7 @@
       {
         "position": "8",
         "positionText": "8",
-        "points": "12",
+        "points": "16",
         "wins": "0",
         "Constructor": {
           "constructorId": "audi",
@@ -114,7 +114,7 @@
       {
         "position": "10",
         "positionText": "10",
-        "points": "1",
+        "points": "3",
         "wins": "0",
         "Constructor": {
           "constructorId": "aston_martin",
@@ -137,5 +137,5 @@
       }
     ]
   },
-  "updated_at_utc": "2026-08-23T07:32:10.078392+00:00"
+  "updated_at_utc": "2026-08-24T07:57:01.492900+00:00"
 }
