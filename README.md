@@ -35,7 +35,7 @@ Season Status: 2026 in progress
 **Drivers' Leader:** Andrea Kimi Antonelli - 292.0 pts (8 wins)
 **Constructors' Leader:** Mercedes - 503.0 pts (10 wins)
 
-📊 14 races completed | 9 remaining | Last updated: Sep 14, 2026 13:39 UTC
+📊 14 races completed | 9 remaining | Last updated: Sep 15, 2026 12:27 UTC
 
 ## 🏆 Championship Battle
 
@@ -131,7 +131,7 @@ Season Status: 2026 in progress
 | 19 | Mexico City Grand Prix | Autódromo Hermanos Rodríguez | Nov 1 | ⬜ Upcoming |
 | 20 | Brazilian Grand Prix | Autódromo José Carlos Pace | Nov 8 | ⬜ Upcoming |
 | 21 | Las Vegas Grand Prix | Las Vegas Strip Street Circuit | Nov 22 | ⬜ Upcoming |
-| 22 | Qatar Grand Prix | Losail International Circuit | Nov 29 | ⬜ Upcoming |
+| 22 | Qatar Grand Prix | Lusail International Circuit | Nov 29 | ⬜ Upcoming |
 | 23 | Abu Dhabi Grand Prix | Yas Marina Circuit | Dec 6 | ⬜ Upcoming |
 
 ---
