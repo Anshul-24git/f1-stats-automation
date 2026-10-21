@@ -35,7 +35,7 @@ Season Status: 2026 in progress
 **Drivers' Leader:** Andrea Kimi Antonelli - 340.0 pts (8 wins)
 **Constructors' Leader:** Mercedes - 578.0 pts (11 wins)
 
-📊 17 races completed | 6 remaining | Last updated: Oct 20, 2026 12:32 UTC
+📊 17 races completed | 6 remaining | Last updated: Oct 21, 2026 12:43 UTC
 
 ## 🏆 Championship Battle
 
