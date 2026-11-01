@@ -1,7 +1,7 @@
 {
   "data": {
     "season": "2026",
-    "round": "18",
+    "round": "19",
     "DriverStandings": [
       {
         "position": "1",
@@ -560,8 +560,27 @@
             "nationality": "American"
           }
         ]
+      },
+      {
+        "position": "24",
+        "positionText": "24",
+        "points": "0",
+        "wins": "0",
+        "Driver": {
+          "driverId": "ryo_hirakawa",
+          "givenName": "Ryo",
+          "familyName": "Hirakawa"
+        },
+        "Constructors": [
+          {
+            "constructorId": "haas",
+            "url": "https://en.wikipedia.org/wiki/Haas_F1_Team",
+            "name": "Haas F1 Team",
+            "nationality": "American"
+          }
+        ]
       }
     ]
   },
-  "updated_at_utc": "2026-10-26T13:54:21.358094+00:00"
+  "updated_at_utc": "2026-11-01T14:02:58.835733+00:00"
 }

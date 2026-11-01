@@ -35,7 +35,7 @@ Season Status: 2026 in progress
 **Drivers' Leader:** Andrea Kimi Antonelli - 365.0 pts (9 wins)
 **Constructors' Leader:** Mercedes - 607.0 pts (12 wins)
 
-📊 18 races completed | 5 remaining | Last updated: Oct 31, 2026 13:18 UTC
+📊 18 races completed | 5 remaining | Last updated: Nov 01, 2026 14:02 UTC
 
 ## 🏆 Championship Battle
 
@@ -89,6 +89,7 @@ Season Status: 2026 in progress
 | 21 | Lance Stroll | Aston Martin | 0 | 0 |
 | 22 | Valtteri Bottas | Cadillac F1 Team | 0 | 0 |
 | 23 | Sergio Pérez | Cadillac F1 Team | 0 | 0 |
+| 24 | Ryo Hirakawa | Haas F1 Team | 0 | 0 |
 
 ## 🏗️ Constructors' Championship — 2026
 
