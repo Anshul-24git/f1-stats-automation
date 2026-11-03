@@ -35,7 +35,7 @@ Season Status: 2026 in progress
 **Drivers' Leader:** Andrea Kimi Antonelli - 380.0 pts (9 wins)
 **Constructors' Leader:** Mercedes - 630.0 pts (12 wins)
 
-📊 19 races completed | 4 remaining | Last updated: Nov 02, 2026 16:49 UTC
+📊 19 races completed | 4 remaining | Last updated: Nov 03, 2026 14:51 UTC
 
 ## 🏆 Championship Battle
 
@@ -57,10 +57,10 @@ Season Status: 2026 in progress
 | 4 | Charles Leclerc | Ferrari | +10.707 | 12 |
 | 5 | Lando Norris | McLaren | +11.778 | 10 |
 | 6 | George Russell | Mercedes | +12.263 | 8 |
-| 7 | Oscar Piastri | McLaren | +19.475 | 6 |
-| 8 | Franco Colapinto | Alpine F1 Team | +20.204 | 4 |
-| 9 | Liam Lawson | RB F1 Team | +20.899 | 2 |
-| 10 | Pierre Gasly | Alpine F1 Team | +21.483 | 1 |
+| 7 | Liam Lawson | RB F1 Team | +20.899 | 6 |
+| 8 | Gabriel Bortoleto | Audi | +22.041 | 4 |
+| 9 | Isack Hadjar | Red Bull | +22.503 | 2 |
+| 10 | Ryo Hirakawa | Haas F1 Team | +25.373 | 1 |
 
 ## 🏎️ Drivers' Championship — 2026
 
@@ -72,23 +72,23 @@ Season Status: 2026 in progress
 | 4 | George Russell | Mercedes | 250 | 3 |
 | 5 | Charles Leclerc | Ferrari | 245 | 1 |
 | 6 | Lando Norris | McLaren | 221 | 2 |
-| 7 | Oscar Piastri | McLaren | 150 | 0 |
-| 8 | Isack Hadjar | Red Bull | 105 | 0 |
-| 9 | Liam Lawson | RB F1 Team | 79 | 0 |
-| 10 | Pierre Gasly | Alpine F1 Team | 43 | 0 |
+| 7 | Oscar Piastri | McLaren | 144 | 0 |
+| 8 | Isack Hadjar | Red Bull | 107 | 0 |
+| 9 | Liam Lawson | RB F1 Team | 83 | 0 |
+| 10 | Pierre Gasly | Alpine F1 Team | 42 | 0 |
 | 11 | Arvid Lindblad | RB F1 Team | 38 | 0 |
-| 12 | Franco Colapinto | Alpine F1 Team | 31 | 0 |
+| 12 | Franco Colapinto | Alpine F1 Team | 27 | 0 |
 | 13 | Oliver Bearman | Haas F1 Team | 23 | 0 |
-| 14 | Nico Hülkenberg | Audi | 13 | 0 |
-| 15 | Gabriel Bortoleto | Audi | 10 | 0 |
+| 14 | Gabriel Bortoleto | Audi | 14 | 0 |
+| 15 | Nico Hülkenberg | Audi | 13 | 0 |
 | 16 | Esteban Ocon | Haas F1 Team | 7 | 0 |
 | 17 | Fernando Alonso | Aston Martin | 7 | 0 |
 | 18 | Carlos Sainz | Williams | 7 | 0 |
 | 19 | Alexander Albon | Williams | 5 | 0 |
 | 20 | Yuki Tsunoda | RB F1 Team | 1 | 0 |
-| 21 | Lance Stroll | Aston Martin | 0 | 0 |
-| 22 | Valtteri Bottas | Cadillac F1 Team | 0 | 0 |
-| 23 | Ryo Hirakawa | Haas F1 Team | 0 | 0 |
+| 21 | Ryo Hirakawa | Haas F1 Team | 1 | 0 |
+| 22 | Lance Stroll | Aston Martin | 0 | 0 |
+| 23 | Valtteri Bottas | Cadillac F1 Team | 0 | 0 |
 | 24 | Sergio Pérez | Cadillac F1 Team | 0 | 0 |
 
 ## 🏗️ Constructors' Championship — 2026
@@ -97,12 +97,12 @@ Season Status: 2026 in progress
 | ---: | --- | ---: | ---: |
 | 1 | Mercedes | 630 | 12 |
 | 2 | Ferrari | 504 | 2 |
-| 3 | Red Bull | 380 | 3 |
-| 4 | McLaren | 371 | 2 |
-| 5 | RB F1 Team | 104 | 0 |
-| 6 | Alpine F1 Team | 74 | 0 |
-| 7 | Haas F1 Team | 30 | 0 |
-| 8 | Audi | 23 | 0 |
+| 3 | Red Bull | 382 | 3 |
+| 4 | McLaren | 365 | 2 |
+| 5 | RB F1 Team | 108 | 0 |
+| 6 | Alpine F1 Team | 69 | 0 |
+| 7 | Haas F1 Team | 31 | 0 |
+| 8 | Audi | 27 | 0 |
 | 9 | Williams | 12 | 0 |
 | 10 | Aston Martin | 7 | 0 |
 | 11 | Cadillac F1 Team | 0 | 0 |
