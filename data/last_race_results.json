@@ -709,8 +709,13 @@
         "points": "0",
         "Driver": {
           "driverId": "rafael_camara",
+          "permanentNumber": "51",
+          "code": "CAM",
+          "url": "https://en.wikipedia.org/wiki/Rafael_C%C3%A2mara",
           "givenName": "Rafael",
-          "familyName": "Camara"
+          "familyName": "Camara",
+          "dateOfBirth": "2005-05-05",
+          "nationality": "Brazilian"
         },
         "Constructor": {
           "constructorId": "haas",
@@ -830,9 +835,9 @@
           "name": "McLaren",
           "nationality": "British"
         },
-        "Q1": "",
-        "Q2": "",
-        "Q3": ""
+        "Q1": "1:30.939",
+        "Q2": "1:29.207",
+        "Q3": "1:27.470"
       },
       {
         "number": "63",
@@ -853,9 +858,9 @@
           "name": "Mercedes",
           "nationality": "German"
         },
-        "Q1": "",
-        "Q2": "",
-        "Q3": ""
+        "Q1": "1:31.206",
+        "Q2": "1:26.745",
+        "Q3": "1:27.674"
       },
       {
         "number": "12",
@@ -876,9 +881,9 @@
           "name": "Mercedes",
           "nationality": "German"
         },
-        "Q1": "",
-        "Q2": "",
-        "Q3": ""
+        "Q1": "1:32.229",
+        "Q2": "1:29.302",
+        "Q3": "1:28.095"
       },
       {
         "number": "16",
@@ -899,9 +904,9 @@
           "name": "Ferrari",
           "nationality": "Italian"
         },
-        "Q1": "",
-        "Q2": "",
-        "Q3": ""
+        "Q1": "1:32.121",
+        "Q2": "1:28.082",
+        "Q3": "1:28.289"
       },
       {
         "number": "30",
@@ -922,9 +927,9 @@
           "name": "RB F1 Team",
           "nationality": "Italian"
         },
-        "Q1": "",
-        "Q2": "",
-        "Q3": ""
+        "Q1": "1:32.085",
+        "Q2": "1:27.049",
+        "Q3": "1:28.321"
       },
       {
         "number": "27",
@@ -945,9 +950,9 @@
           "name": "Audi",
           "nationality": "German"
         },
-        "Q1": "",
-        "Q2": "",
-        "Q3": ""
+        "Q1": "1:31.693",
+        "Q2": "1:28.361",
+        "Q3": "1:28.668"
       },
       {
         "number": "6",
@@ -968,9 +973,9 @@
           "name": "Red Bull",
           "nationality": "Austrian"
         },
-        "Q1": "",
-        "Q2": "",
-        "Q3": ""
+        "Q1": "1:32.059",
+        "Q2": "1:27.218",
+        "Q3": "1:28.763"
       },
       {
         "number": "87",
@@ -991,9 +996,9 @@
           "name": "Haas F1 Team",
           "nationality": "American"
         },
-        "Q1": "",
-        "Q2": "",
-        "Q3": ""
+        "Q1": "1:33.030",
+        "Q2": "1:29.130",
+        "Q3": "1:29.831"
       },
       {
         "number": "14",
@@ -1014,9 +1019,9 @@
           "name": "Aston Martin",
           "nationality": "British"
         },
-        "Q1": "",
-        "Q2": "",
-        "Q3": ""
+        "Q1": "1:32.092",
+        "Q2": "1:29.072",
+        "Q3": "1:30.311"
       },
       {
         "number": "23",
@@ -1037,9 +1042,9 @@
           "name": "Williams",
           "nationality": "British"
         },
-        "Q1": "",
-        "Q2": "",
-        "Q3": ""
+        "Q1": "1:33.150",
+        "Q2": "1:28.918",
+        "Q3": "1:30.456"
       },
       {
         "number": "44",
@@ -1060,8 +1065,8 @@
           "name": "Ferrari",
           "nationality": "Italian"
         },
-        "Q1": "",
-        "Q2": ""
+        "Q1": "1:31.666",
+        "Q2": "1:30.001"
       },
       {
         "number": "81",
@@ -1082,16 +1087,21 @@
           "name": "McLaren",
           "nationality": "British"
         },
-        "Q1": "",
-        "Q2": ""
+        "Q1": "1:32.251",
+        "Q2": "1:30.369"
       },
       {
         "number": "51",
         "position": "13",
         "Driver": {
           "driverId": "rafael_camara",
+          "permanentNumber": "51",
+          "code": "CAM",
+          "url": "https://en.wikipedia.org/wiki/Rafael_C%C3%A2mara",
           "givenName": "Rafael",
-          "familyName": "Camara"
+          "familyName": "Camara",
+          "dateOfBirth": "2005-05-05",
+          "nationality": "Brazilian"
         },
         "Constructor": {
           "constructorId": "haas",
@@ -1099,8 +1109,8 @@
           "name": "Haas F1 Team",
           "nationality": "American"
         },
-        "Q1": "",
-        "Q2": ""
+        "Q1": "1:32.809",
+        "Q2": "1:31.515"
       },
       {
         "number": "41",
@@ -1121,8 +1131,8 @@
           "name": "RB F1 Team",
           "nationality": "Italian"
         },
-        "Q1": "",
-        "Q2": ""
+        "Q1": "1:32.306",
+        "Q2": "1:31.687"
       },
       {
         "number": "55",
@@ -1143,8 +1153,8 @@
           "name": "Williams",
           "nationality": "British"
         },
-        "Q1": "",
-        "Q2": ""
+        "Q1": "1:32.959",
+        "Q2": "1:31.785"
       },
       {
         "number": "3",
@@ -1165,7 +1175,7 @@
           "name": "Red Bull",
           "nationality": "Austrian"
         },
-        "Q1": "",
+        "Q1": "1:31.238",
         "Q2": ""
       },
       {
@@ -1187,7 +1197,7 @@
           "name": "Alpine F1 Team",
           "nationality": "French"
         },
-        "Q1": ""
+        "Q1": "1:33.327"
       },
       {
         "number": "10",
@@ -1208,7 +1218,7 @@
           "name": "Alpine F1 Team",
           "nationality": "French"
         },
-        "Q1": ""
+        "Q1": "1:33.449"
       },
       {
         "number": "18",
@@ -1229,7 +1239,7 @@
           "name": "Aston Martin",
           "nationality": "British"
         },
-        "Q1": ""
+        "Q1": "1:33.653"
       },
       {
         "number": "77",
@@ -1250,7 +1260,7 @@
           "name": "Cadillac F1 Team",
           "nationality": "American"
         },
-        "Q1": ""
+        "Q1": "1:33.774"
       },
       {
         "number": "11",
@@ -1271,7 +1281,7 @@
           "name": "Cadillac F1 Team",
           "nationality": "American"
         },
-        "Q1": ""
+        "Q1": "1:34.509"
       },
       {
         "number": "5",
@@ -1292,9 +1302,9 @@
           "name": "Audi",
           "nationality": "German"
         },
-        "Q1": ""
+        "Q1": "1:41.564"
       }
     ]
   },
-  "updated_at_utc": "2026-11-09T17:10:21.016967+00:00"
+  "updated_at_utc": "2026-11-10T15:24:44.050460+00:00"
 }

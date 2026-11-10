@@ -592,8 +592,13 @@
         "wins": "0",
         "Driver": {
           "driverId": "rafael_camara",
+          "permanentNumber": "51",
+          "code": "CAM",
+          "url": "https://en.wikipedia.org/wiki/Rafael_C%C3%A2mara",
           "givenName": "Rafael",
-          "familyName": "Camara"
+          "familyName": "Camara",
+          "dateOfBirth": "2005-05-05",
+          "nationality": "Brazilian"
         },
         "Constructors": [
           {
@@ -606,5 +611,5 @@
       }
     ]
   },
-  "updated_at_utc": "2026-11-09T17:10:21.015431+00:00"
+  "updated_at_utc": "2026-11-10T15:24:44.048913+00:00"
 }
