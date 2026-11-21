@@ -1,7 +1,7 @@
 {
   "data": {
     "season": "2026",
-    "round": "20",
+    "round": "21",
     "ConstructorStandings": [
       {
         "position": "1",
@@ -137,5 +137,5 @@
       }
     ]
   },
-  "updated_at_utc": "2026-11-09T17:10:21.016647+00:00"
+  "updated_at_utc": "2026-11-21T15:05:36.045435+00:00"
 }
