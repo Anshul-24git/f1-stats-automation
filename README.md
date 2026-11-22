@@ -29,61 +29,61 @@ This repository tracks the current F1 season with comprehensive data including d
 <!-- F1_AUTO_START -->
 Season Status: 2026 in progress
 
-**Last Race:** Brazilian Grand Prix (Round 20) - Autódromo José Carlos Pace, Brazil (Nov 8)
-**Next Race:** Las Vegas Grand Prix (Round 21) - Las Vegas Strip Street Circuit, USA (Nov 22)
+**Last Race:** Las Vegas Grand Prix (Round 21) - Las Vegas Strip Street Circuit, USA (Nov 22)
+**Next Race:** Qatar Grand Prix (Round 22) - Lusail International Circuit, Qatar (Nov 29)
 
-**Drivers' Leader:** Andrea Kimi Antonelli - 390.0 pts (9 wins)
-**Constructors' Leader:** Mercedes - 652.0 pts (12 wins)
+**Drivers' Leader:** Andrea Kimi Antonelli - 402.0 pts (9 wins)
+**Constructors' Leader:** Mercedes - 666.0 pts (12 wins)
 
-📊 20 races completed | 3 remaining | Last updated: Nov 21, 2026 15:05 UTC
+📊 20 races completed | 3 remaining | Last updated: Nov 22, 2026 15:03 UTC
 
 ## 🏆 Championship Battle
 
 | Driver | Team | Points | Gap to Leader |
 | --- | --- | ---: | --- |
-| 🥇 Andrea Kimi Antonelli | Mercedes | 390 | — |
-| 🥈 Max Verstappen | Red Bull | 279 | -111 pts |
-| 🥉 George Russell | Mercedes | 262 | -128 pts |
-| 4 Lewis Hamilton | Ferrari | 261 | -129 pts |
-| 5 Charles Leclerc | Ferrari | 249 | -141 pts |
+| 🥇 Andrea Kimi Antonelli | Mercedes | 402 | — |
+| 🥈 Max Verstappen | Red Bull | 304 | -98 pts |
+| 🥉 Lewis Hamilton | Ferrari | 267 | -135 pts |
+| 4 George Russell | Mercedes | 264 | -138 pts |
+| 5 Lando Norris | McLaren | 264 | -138 pts |
 
-## 🏁 Last Race: Brazilian Grand Prix (Round 20)
+## 🏁 Last Race: Las Vegas Grand Prix (Round 21)
 
 | Pos | Driver | Team | Time/Status | Points |
 | --- | --- | --- | --- | ---: |
-| 🥇 | Lando Norris | McLaren | 1:35:23.504 | 25 |
-| 🥈 | Max Verstappen | Red Bull | +14.602 | 18 |
-| 🥉 | Isack Hadjar | Red Bull | +24.485 | 15 |
-| 4 | George Russell | Mercedes | +33.991 | 12 |
-| 5 | Andrea Kimi Antonelli ⚡ | Mercedes | +41.017 | 10 |
-| 6 | Oscar Piastri | McLaren | +56.475 | 8 |
-| 7 | Liam Lawson | RB F1 Team | +1:15.402 | 6 |
-| 8 | Charles Leclerc | Ferrari | +1:18.586 | 4 |
-| 9 | Lewis Hamilton | Ferrari | +4.427 | 2 |
-| 10 | Nico Hülkenberg | Audi | +17.105 | 1 |
+| 🥇 | Max Verstappen | Red Bull | 1:27:39.624 | 25 |
+| 🥈 | Lando Norris | McLaren | +0.639 | 18 |
+| 🥉 | Oscar Piastri | McLaren | +1.529 | 15 |
+| 4 | Andrea Kimi Antonelli | Mercedes | +2.574 | 12 |
+| 5 | Pierre Gasly | Alpine F1 Team | +2.927 | 10 |
+| 6 | Franco Colapinto | Alpine F1 Team | +7.955 | 8 |
+| 7 | Lewis Hamilton | Ferrari | +12.795 | 6 |
+| 8 | Carlos Sainz | Williams | +12.938 | 4 |
+| 9 | George Russell | Mercedes | +13.192 | 2 |
+| 10 | Charles Leclerc | Ferrari | +17.554 | 1 |
 
 ## 🏎️ Drivers' Championship — 2026
 
 | Pos | Driver | Team | Points | Wins |
 | ---: | --- | --- | ---: | ---: |
-| 1 | Andrea Kimi Antonelli | Mercedes | 390 | 9 |
-| 2 | Max Verstappen | Red Bull | 279 | 3 |
-| 3 | George Russell | Mercedes | 262 | 3 |
-| 4 | Lewis Hamilton | Ferrari | 261 | 1 |
-| 5 | Charles Leclerc | Ferrari | 249 | 1 |
-| 6 | Lando Norris | McLaren | 246 | 3 |
-| 7 | Oscar Piastri | McLaren | 152 | 0 |
+| 1 | Andrea Kimi Antonelli | Mercedes | 402 | 9 |
+| 2 | Max Verstappen | Red Bull | 304 | 4 |
+| 3 | Lewis Hamilton | Ferrari | 267 | 1 |
+| 4 | George Russell | Mercedes | 264 | 3 |
+| 5 | Lando Norris | McLaren | 264 | 3 |
+| 6 | Charles Leclerc | Ferrari | 250 | 1 |
+| 7 | Oscar Piastri | McLaren | 167 | 0 |
 | 8 | Isack Hadjar | Red Bull | 122 | 0 |
 | 9 | Liam Lawson | RB F1 Team | 89 | 0 |
-| 10 | Pierre Gasly | Alpine F1 Team | 42 | 0 |
+| 10 | Pierre Gasly | Alpine F1 Team | 52 | 0 |
 | 11 | Arvid Lindblad | RB F1 Team | 38 | 0 |
-| 12 | Franco Colapinto | Alpine F1 Team | 27 | 0 |
+| 12 | Franco Colapinto | Alpine F1 Team | 35 | 0 |
 | 13 | Oliver Bearman | Haas F1 Team | 23 | 0 |
 | 14 | Gabriel Bortoleto | Audi | 14 | 0 |
 | 15 | Nico Hülkenberg | Audi | 14 | 0 |
-| 16 | Esteban Ocon | Haas F1 Team | 7 | 0 |
-| 17 | Fernando Alonso | Aston Martin | 7 | 0 |
-| 18 | Carlos Sainz | Williams | 7 | 0 |
+| 16 | Carlos Sainz | Williams | 11 | 0 |
+| 17 | Esteban Ocon | Haas F1 Team | 7 | 0 |
+| 18 | Fernando Alonso | Aston Martin | 7 | 0 |
 | 19 | Alexander Albon | Williams | 5 | 0 |
 | 20 | Yuki Tsunoda | RB F1 Team | 1 | 0 |
 | 21 | Ryo Hirakawa | Haas F1 Team | 1 | 0 |
@@ -96,15 +96,15 @@ Season Status: 2026 in progress
 
 | Pos | Team | Points | Wins |
 | ---: | --- | ---: | ---: |
-| 1 | Mercedes | 652 | 12 |
-| 2 | Ferrari | 510 | 2 |
-| 3 | Red Bull | 415 | 3 |
-| 4 | McLaren | 398 | 3 |
+| 1 | Mercedes | 666 | 12 |
+| 2 | Ferrari | 517 | 2 |
+| 3 | Red Bull | 440 | 4 |
+| 4 | McLaren | 431 | 3 |
 | 5 | RB F1 Team | 114 | 0 |
-| 6 | Alpine F1 Team | 69 | 0 |
+| 6 | Alpine F1 Team | 87 | 0 |
 | 7 | Haas F1 Team | 31 | 0 |
 | 8 | Audi | 28 | 0 |
-| 9 | Williams | 12 | 0 |
+| 9 | Williams | 16 | 0 |
 | 10 | Aston Martin | 7 | 0 |
 | 11 | Cadillac F1 Team | 0 | 0 |
 
@@ -132,8 +132,8 @@ Season Status: 2026 in progress
 | 18 | United States Grand Prix | Circuit of the Americas | Oct 25 | ✅ Completed |
 | 19 | Mexico City Grand Prix | Autódromo Hermanos Rodríguez | Nov 1 | ✅ Completed |
 | 20 | Brazilian Grand Prix | Autódromo José Carlos Pace | Nov 8 | ✅ Completed |
-| 21 | Las Vegas Grand Prix | Las Vegas Strip Street Circuit | Nov 22 | 🔜 Next Race |
-| 22 | Qatar Grand Prix | Lusail International Circuit | Nov 29 | ⬜ Upcoming |
+| 21 | Las Vegas Grand Prix | Las Vegas Strip Street Circuit | Nov 22 | ⬜ Upcoming |
+| 22 | Qatar Grand Prix | Lusail International Circuit | Nov 29 | 🔜 Next Race |
 | 23 | Abu Dhabi Grand Prix | Yas Marina Circuit | Dec 6 | ⬜ Upcoming |
 
 ---
@@ -142,4 +142,4 @@ Season Status: 2026 in progress
 
 
 <!-- F1_LEADER -->
-🏁 Current F1 leader (2026): Andrea Kimi Antonelli - 390 pts, 9 wins
+🏁 Current F1 leader (2026): Andrea Kimi Antonelli - 402 pts, 9 wins
